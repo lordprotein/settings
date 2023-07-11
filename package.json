@@ -2,9 +2,12 @@
   "name": "settings",
   "private": true,
   "version": "1.0.0",
-  "workspaces": ["packages/**"],
+  "workspaces": [
+    "packages/**"
+  ],
   "main": "index.js",
   "repository": "git@github.com:lordprotein/settings.git",
   "author": "lordprotein <gamee.logi@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "yarn@3.6.1"
 }
