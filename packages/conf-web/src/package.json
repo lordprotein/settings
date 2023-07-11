@@ -8,8 +8,8 @@
     "eslintrc.js",
     "lint-staged.config.js",
     "stylelintrc.js",
-    "tsconfig.js",
-    "prettierrc.js"
+    "tsconfig.json",
+    "prettierrc.json"
   ],
   "scripts": {
     "start": "razzle start",
