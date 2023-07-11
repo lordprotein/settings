@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "workspaces": [
-    "packages/*"
+    "packages/conf-web/src"
   ],
   "main": "index.js",
   "repository": "git@github.com:lordprotein/settings.git",
