@@ -28,10 +28,8 @@
     "stand:stage": "node scripts/switch-stand-dev.js dev-stands/.env.dev.stage",
     "stand:prod": "node scripts/switch-stand-dev.js dev-stands/.env.dev.prod"
   },
-  "peerDependencies": {
-    "reselect": ">=4.1.8"
-  },
   "dependencies": {
+    "reselect": ">=4.1.8",
     "@loadable/component": "^5.15.2",
     "@loadable/server": "^5.15.2",
     "@loadable/webpack-plugin": "^5.15.2",
