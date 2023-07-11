@@ -22,7 +22,6 @@
     "pretty": true,
     "suppressImplicitAnyIndexErrors": true,
     "target": "esnext",
-    "baseUrl": "src",
   },
   "exclude": [
     "node_modules",
