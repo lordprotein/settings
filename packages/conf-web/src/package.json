@@ -1,11 +1,15 @@
 {
-  "name": "@olco/cw",
+  "name": "@olco/conf-web",
   "version": "0.1.0",
   "license": "Commercial",
   "private": true,
-  "main": "index.js",
+  "main": "./index.js",
   "files": [
-    "*"
+    "eslintrc.js",
+    "lint-staged.config.js",
+    "stylelintrc.js",
+    "tsconfig.base.json",
+    "prettierrc.json"
   ],
   "scripts": {
     "start": "razzle start",

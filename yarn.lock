@@ -2261,9 +2261,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@olco/cw@workspace:packages/conf-web/src":
+"@olco/conf-web@workspace:packages/conf-web/src":
   version: 0.0.0-use.local
-  resolution: "@olco/cw@workspace:packages/conf-web/src"
+  resolution: "@olco/conf-web@workspace:packages/conf-web/src"
   dependencies:
     "@loadable/babel-plugin": ^5.13.2
     "@loadable/component": ^5.15.2
