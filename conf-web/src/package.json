@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "license": "Commercial",
   "private": true,
+  "main": "index.js",
+  "files": ["eslintrc.js", "lint-staged.config.js", "stylelintrc.js", "tsconfig.js", "prettierrc.js"],
   "scripts": {
     "start": "razzle start",
     "start:clear_mac": "rm -rf build && rm -rf cache && razzle start",
