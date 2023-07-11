@@ -1,4 +1,4 @@
-module.exports = {
+{
   "compilerOptions": {
     "allowJs": true,
     "allowUnreachableCode": false,
@@ -23,9 +23,6 @@ module.exports = {
     "suppressImplicitAnyIndexErrors": true,
     "target": "esnext",
     "baseUrl": "src",
-    "paths": {
-      "typings/*": ["../typings/*"]
-    }
   },
   "exclude": [
     "node_modules",
