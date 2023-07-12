@@ -1,23 +1,39 @@
-// Node.js File System module is required to work with file operations
 const fs = require('fs');
+const path = require('path');
 
-// Retrieve source file path and destination directory path from command line arguments
-const [source, destination] = process.argv.slice(2);
+// Get command-line arguments
+const [, , filePath, targetDir] = process.argv;
 
-// Check if both source and destination paths are provided
-if (!source || !destination) {
-  console.error('Both source file path and destination directory path are required');
-  process.exit(1);
-}
-
-// Copy the file from source path to destination directory
-fs.copyFile(source, destination, (err) => {
-  // If there's an error during the copy operation, print the error message and exit with a failure status
-  if (err) {
-    console.error('An error occurred while copying the file:', err);
-    process.exit(1);
+function pasteFile(filePath, targetDir) {
+  // Check if both file path and target directory are provided
+  if (!filePath || !targetDir) {
+    console.error('Please provide both file path and target directory');
+    return;
   }
 
-  // If there's no error, print a success message
-  console.log(`File successfully copied from ${source} to ${destination}`);
-});
+  // Resolve the source file path
+  const sourceFilePath = path.resolve(filePath);
+
+  // Resolve the target directory path
+  const targetFolderPath = path.resolve(targetDir);
+
+  // Generate the target file path
+  const targetFilePath = path.join(targetFolderPath, path.basename(sourceFilePath));
+
+  // Check if the target directory exists
+  if (!fs.existsSync(targetFolderPath)) {
+    // Create the target directory if it doesn't exist
+    fs.mkdirSync(targetFolderPath, { recursive: true });
+  }
+
+  // Read the file content
+  const fileContent = fs.readFileSync(sourceFilePath, 'utf8');
+
+  // Paste the file into the target directory
+  fs.writeFileSync(targetFilePath, fileContent);
+
+  console.log(`File ${path.basename(sourceFilePath)} has been pasted into ${targetDir}`);
+}
+
+// Call the function with the command-line arguments
+pasteFile(filePath, targetDir);
