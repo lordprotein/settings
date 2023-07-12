@@ -24,14 +24,13 @@ fs.writeFileSync(projectPackageJsonPath, JSON.stringify(projectPackageJson, null
 // Execute yarn install
 const install = spawn('yarn', ['install'], { cwd: projectRootPath });
 
-let hasCoreJSMessage = false;  // Flag to track if "core-js" message has been received
-
 install.stdout.on('data', (data) => {
   const message = data.toString();
 
   // Check if the message contains "core-js" information
-  if (message.includes('YN0007')) {
-    hasCoreJSMessage = true;
+  if (message.includes('YN0007: │ core-js')) {
+    install.kill('Ass success, but have some errors with core-js (yarn error: YN0007)')
+    console.log(123)
   }
 
   process.stdout.write(data);
