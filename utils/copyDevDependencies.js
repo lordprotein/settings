@@ -18,7 +18,8 @@ const projectPackageJson = JSON.parse(fs.readFileSync(projectPackageJsonPath, 'u
 // Merge devDependencies
 // This operation will overwrite existing dependencies in the project
 // with the versions found in the library
-projectPackageJson.devDependencies = {...projectPackageJson.devDependencies, ...libraryDevDeps.devDependencies};
+// projectPackageJson.devDependencies = {...projectPackageJson.devDependencies, ...libraryDevDeps.devDependencies};
+projectPackageJson.devDependencies = libraryDevDeps.devDependencies;
 
 // Write the updated package.json back to your project
 fs.writeFileSync(projectPackageJsonPath, JSON.stringify(projectPackageJson, null, 2), 'utf8');
@@ -36,6 +37,7 @@ install.stderr.on('data', (data) => {
 
 install.on('error', (error) => {
   console.error(`Error during yarn install: ${error.message}`);
+  process.stdout.end();  // Close the stdout stream
 });
 
 install.on('close', (code) => {
