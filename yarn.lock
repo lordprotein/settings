@@ -481,7 +481,7 @@ __metadata:
     astrabet-templates-kit: "https://maven.infra.betdev.cloud/releases/npm/astrabet-templates-kit_0.43.0.tar.gz"
     betweb-openapi-axios: "https://maven.infra.betdev.cloud/releases/npm/betweb-openapi-axios_0.216.0.tar.gz"
     cookie-parser: ^1.4.6
-    core-js: ^3.31.1
+    core-js: ^2.4.0
     country-flags-svg: ^1.1.8
     dayjs: ^1.11.7
     express: ^4.17.1
@@ -528,7 +528,7 @@ __metadata:
 
 "@olco/scripts@git@github.com:lordprotein/settings.git#workspace=@olco/scripts":
   version: 0.1.0
-  resolution: "@olco/scripts@git@github.com:lordprotein/settings.git#workspace=%40olco%2Fscripts&commit=6faa7b032be705ec0b65b1f88b7eff3bc91cbed7"
+  resolution: "@olco/scripts@git@github.com:lordprotein/settings.git#workspace=%40olco%2Fscripts&commit=be4217a5fe29d391215dfbed89b3a72ce7753cd3"
   checksum: 76bcff8274d4aa05f38397f691ec4686d6ac609bb120efc012fbe3ea231e8beed62b32f9508152fff230b9a7baf946d129f8634df366e5a3d035ceaa11cf2538
   languageName: node
   linkType: hard
@@ -1468,13 +1468,6 @@ __metadata:
   version: 2.6.12
   resolution: "core-js@npm:2.6.12"
   checksum: 44fa9934a85f8c78d61e0c8b7b22436330471ffe59ec5076fe7f324d6e8cf7f824b14b1c81ca73608b13bdb0fef035bd820989bf059767ad6fa13123bb8bd016
-  languageName: node
-  linkType: hard
-
-"core-js@npm:^3.31.1":
-  version: 3.31.1
-  resolution: "core-js@npm:3.31.1"
-  checksum: 14519213a63c55cf188bdd2f4dece54583feaf6b90e75d6c65e07f509cd487055bf64898aeda7c97c36029ac1ea2f2ed8e4b02281553f6a257e7143a32a14015
   languageName: node
   linkType: hard
 
