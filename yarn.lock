@@ -472,7 +472,7 @@ __metadata:
     "@loadable/component": ^5.15.2
     "@loadable/server": ^5.15.2
     "@loadable/webpack-plugin": ^5.15.2
-    "@olco/scripts": "file:../../../utils"
+    "@olco/scripts": "git@github.com:lordprotein/settings.git#workspace=@olco/scripts"
     "@react-hook/window-size": ^3.0.7
     "@reduxjs/toolkit": ^1.6.1
     "@typeform/embed-react": ^2.24.0
@@ -525,10 +525,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@olco/scripts@file:../../../utils::locator=%40olco%2Fconf-web%40workspace%3Apackages%2Fconf-web%2Fsrc":
+"@olco/scripts@git@github.com:lordprotein/settings.git#workspace=@olco/scripts":
   version: 0.1.0
-  resolution: "@olco/scripts@file:../../../utils#../../../utils::hash=c36fba&locator=%40olco%2Fconf-web%40workspace%3Apackages%2Fconf-web%2Fsrc"
-  checksum: e0d9a1906765bb8acffea9920379da76a87530e89f6f3d7bcce8d7bdb65bb1e5b0fad85557ae3ee4b8e95866a02a6c2d0de5a7678d920ed44ab70df63c284fb1
+  resolution: "@olco/scripts@git@github.com:lordprotein/settings.git#workspace=%40olco%2Fscripts&commit=d26036de51ba786c37ae71b5befded83100a9d9a"
+  checksum: 69413f6f5a955156cbccf08727d7a7baaf3b181e93e54474ef9718f27cfa06c1979e51f3f84b2e0f95ac157cff1d96c216e64af4c66690a562fe1cb801dbc2c9
   languageName: node
   linkType: hard
 

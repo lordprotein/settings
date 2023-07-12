@@ -32,7 +32,7 @@
     "@loadable/component": "^5.15.2",
     "@loadable/server": "^5.15.2",
     "@loadable/webpack-plugin": "^5.15.2",
-    "@olco/scripts": "file:../../../utils",
+    "@olco/scripts": "git@github.com:lordprotein/settings.git#workspace=@olco/scripts",
     "@react-hook/window-size": "^3.0.7",
     "@reduxjs/toolkit": "^1.6.1",
     "@typeform/embed-react": "^2.24.0",
