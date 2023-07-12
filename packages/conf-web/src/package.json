@@ -29,13 +29,14 @@
     "stand:sandbox": "node scripts/switch-stand-dev.js dev-stands/.env.dev.sandbox",
     "stand:stage": "node scripts/switch-stand-dev.js dev-stands/.env.dev.stage",
     "stand:prod": "node scripts/switch-stand-dev.js dev-stands/.env.dev.prod",
-    "postinstall": "node ../scripts/copyDevDependencies.js"
+    "postinstall": "node ../scripts/copyDevDependencies.js",
+      "sdsfd": " yarn add @olco/conf-web@git@github.com:lordprotein/settings.git#workspace=@olco/conf-web\n"
   },
   "dependencies": {
     "@loadable/component": "^5.15.2",
     "@loadable/server": "^5.15.2",
     "@loadable/webpack-plugin": "^5.15.2",
-    "@olco/scripts": "git@github.com:lordprotein/settings.git#workspace=@olco/scripts",
+    "@olco/scripts": "file:../../../utils",
     "@react-hook/window-size": "^3.0.7",
     "@reduxjs/toolkit": "^1.6.1",
     "@typeform/embed-react": "^2.24.0",

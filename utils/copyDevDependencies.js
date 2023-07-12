@@ -29,7 +29,7 @@ install.stdout.on('data', (data) => {
 
   // Check if the message contains "core-js" information
   if (message.includes('YN0007: │ core-js')) {
-    install.kill('Install was success, but have some errors with core-js (yarn error: YN0007)')
+    install.kill('SIGHUP')
     console.log(123)
   }
 
