@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { exec } = require('child_process');
+const { spawn } = require('child_process');
 
 // Path to the package.json file in your project
 const projectRootPath = path.resolve(__dirname, '..', '..', '..');
@@ -24,16 +24,22 @@ projectPackageJson.devDependencies = {...projectPackageJson.devDependencies, ...
 fs.writeFileSync(projectPackageJsonPath, JSON.stringify(projectPackageJson, null, 2), 'utf8');
 
 // Execute yarn install
-exec('yarn install', { cwd: projectRootPath }, (error, stdout, stderr) => {
-  if (error) {
-    console.error(`Error during yarn install: ${error.message}`);
-    return;
-  }
+const install = spawn('yarn', ['install'], { cwd: projectRootPath });
 
-  if (stderr) {
-    console.error(`yarn install stderr: ${stderr}`);
-    return;
-  }
+install.stdout.on('data', (data) => {
+  process.stdout.write(data);
+});
 
-  console.log(`yarn install stdout: ${stdout}`);
+install.stderr.on('data', (data) => {
+  process.stderr.write(data);
+});
+
+install.on('error', (error) => {
+  console.error(`Error during yarn install: ${error.message}`);
+});
+
+install.on('close', (code) => {
+  console.log(`yarn install process exited with code ${code}`);
+  process.stdout.end();  // Close the stdout stream
+  process.stderr.end();  // Close the stderr stream
 });
