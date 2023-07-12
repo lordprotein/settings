@@ -26,14 +26,13 @@
     "locales:download": "node scripts/csvtojson.js",
     "stand:sandbox": "node scripts/switch-stand-dev.js dev-stands/.env.dev.sandbox",
     "stand:stage": "node scripts/switch-stand-dev.js dev-stands/.env.dev.stage",
-    "stand:prod": "node scripts/switch-stand-dev.js dev-stands/.env.dev.prod",
-    "postinstall": "node ../scripts/copyDevDependencies.ts"
+    "stand:prod": "node scripts/switch-stand-dev.js dev-stands/.env.dev.prod"
   },
   "dependencies": {
     "@loadable/component": "^5.15.2",
     "@loadable/server": "^5.15.2",
     "@loadable/webpack-plugin": "^5.15.2",
-    "@olco/scripts": "file:../../../scripts",
+    "@olco/scripts": "file:../../../utils",
     "@react-hook/window-size": "^3.0.7",
     "@reduxjs/toolkit": "^1.6.1",
     "@typeform/embed-react": "^2.24.0",

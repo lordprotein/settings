@@ -1,0 +1,11 @@
+{
+  "name": "@olco/scripts",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "files": [
+    "copyDevDependencies.js"
+  ],
+  "main": "./index.js",
+  "packageManager": "yarn@3.6.1"
+}

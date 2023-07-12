@@ -24,4 +24,4 @@ function copyDevDependencies() {
   fs.writeFileSync(projectPackageJsonPath, JSON.stringify(projectPackageJson, null, 2), 'utf8');
 }
 
-module.exports = copyDevDependencies;
+module.exports = {copyDevDependencies};
