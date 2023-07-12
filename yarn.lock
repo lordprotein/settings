@@ -527,10 +527,16 @@ __metadata:
 
 "@olco/scripts@file:../../../utils::locator=%40olco%2Fconf-web%40workspace%3Apackages%2Fconf-web%2Fsrc":
   version: 0.1.0
-  resolution: "@olco/scripts@file:../../../utils#../../../utils::hash=f2f5af&locator=%40olco%2Fconf-web%40workspace%3Apackages%2Fconf-web%2Fsrc"
-  checksum: 1e6bd997569d18c123a7eca42f8c8384f10a432b93b03029ef46c9dd431f2e72b5636bda42a60654bb31af548bbcc6358d81ac4d3db88be1071814b2ae32374a
+  resolution: "@olco/scripts@file:../../../utils#../../../utils::hash=c36fba&locator=%40olco%2Fconf-web%40workspace%3Apackages%2Fconf-web%2Fsrc"
+  checksum: e0d9a1906765bb8acffea9920379da76a87530e89f6f3d7bcce8d7bdb65bb1e5b0fad85557ae3ee4b8e95866a02a6c2d0de5a7678d920ed44ab70df63c284fb1
   languageName: node
   linkType: hard
+
+"@olco/scripts@workspace:utils":
+  version: 0.0.0-use.local
+  resolution: "@olco/scripts@workspace:utils"
+  languageName: unknown
+  linkType: soft
 
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0

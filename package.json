@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "workspaces": [
     "packages/conf-web/src",
-    "scripts"
+    "utils"
   ],
   "main": "index.js",
   "repository": "git@github.com:lordprotein/settings.git",
