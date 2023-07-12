@@ -26,8 +26,7 @@
     "locales:download": "node scripts/csvtojson.js",
     "stand:sandbox": "node scripts/switch-stand-dev.js dev-stands/.env.dev.sandbox",
     "stand:stage": "node scripts/switch-stand-dev.js dev-stands/.env.dev.stage",
-    "stand:prod": "node scripts/switch-stand-dev.js dev-stands/.env.dev.prod",
-    "postinstall": "node ../utils/copyDevDependencies.ts"
+    "stand:prod": "node scripts/switch-stand-dev.js dev-stands/.env.dev.prod"
   },
   "dependencies": {
     "@loadable/component": "^5.15.2",
