@@ -3,5 +3,4 @@ module.exports = {
   lintStaged: require('./lint-staged.config'),
   prettierrc: require('./prettierrc'),
   stylelintrc: require('./stylelintrc'),
-  tsconfig: require('./tsconfig.json')
 }

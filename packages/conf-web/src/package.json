@@ -10,7 +10,7 @@
     "stylelintrc.js",
     "tsconfig.base.json",
     "prettierrc.json",
-    "../../../scripts/copyDevDependencies.ts"
+    "scripts"
   ],
   "scripts": {
     "start": "razzle start",
@@ -28,7 +28,7 @@
     "stand:sandbox": "node scripts/switch-stand-dev.js dev-stands/.env.dev.sandbox",
     "stand:stage": "node scripts/switch-stand-dev.js dev-stands/.env.dev.stage",
     "stand:prod": "node scripts/switch-stand-dev.js dev-stands/.env.dev.prod",
-    "postinstall": "node ../../../scripts/copyDevDependencies.ts"
+    "postinstall": "node scripts/copyDevDependencies.ts"
   },
   "dependencies": {
     "@loadable/component": "^5.15.2",
