@@ -37,7 +37,6 @@ install.stderr.on('data', (data) => {
 
 install.on('error', (error) => {
   console.error(`Error during yarn install: ${error.message}`);
-  process.stdout.end();  // Close the stdout stream
 });
 
 install.on('close', (code) => {

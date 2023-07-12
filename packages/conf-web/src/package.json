@@ -9,7 +9,7 @@
     "lint-staged.config.js",
     "stylelintrc.js",
     "tsconfig.base.json",
-    "prettierrc.json",
+    "prettierrc.js",
     "devDependencies.json"
   ],
   "scripts": {
