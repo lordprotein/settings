@@ -10,7 +10,8 @@
     "stylelintrc.js",
     "tsconfig.base.json",
     "prettierrc.js",
-    "devDependencies.json"
+    "devDependencies.json",
+    ".prettierignore"
   ],
   "scripts": {
     "start": "razzle start",
