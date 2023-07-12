@@ -9,7 +9,8 @@
     "lint-staged.config.js",
     "stylelintrc.js",
     "tsconfig.base.json",
-    "prettierrc.json"
+    "prettierrc.json",
+    "devDependencies.json"
   ],
   "scripts": {
     "start": "razzle start",
