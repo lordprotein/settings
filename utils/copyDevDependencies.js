@@ -16,9 +16,6 @@ const libraryDevDeps = JSON.parse(fs.readFileSync(libraryDevDepsJsonPath, 'utf8'
 const projectPackageJson = JSON.parse(fs.readFileSync(projectPackageJsonPath, 'utf8'));
 
 // Merge devDependencies
-// This operation will overwrite existing dependencies in the project
-// with the versions found in the library
-// projectPackageJson.devDependencies = {...projectPackageJson.devDependencies, ...libraryDevDeps.devDependencies};
 projectPackageJson.devDependencies = libraryDevDeps.devDependencies;
 
 // Write the updated package.json back to your project
@@ -27,7 +24,16 @@ fs.writeFileSync(projectPackageJsonPath, JSON.stringify(projectPackageJson, null
 // Execute yarn install
 const install = spawn('yarn', ['install'], { cwd: projectRootPath });
 
+let hasCoreJSMessage = false;  // Flag to track if "core-js" message has been received
+
 install.stdout.on('data', (data) => {
+  const message = data.toString();
+
+  // Check if the message contains "core-js" information
+  if (message.includes('YN0007')) {
+    hasCoreJSMessage = true;
+  }
+
   process.stdout.write(data);
 });
 
