@@ -472,7 +472,7 @@ __metadata:
     "@loadable/component": ^5.15.2
     "@loadable/server": ^5.15.2
     "@loadable/webpack-plugin": ^5.15.2
-    "@olco/scripts": "file:../../../utils"
+    "@olco/scripts": "workspace:^"
     "@react-hook/window-size": ^3.0.7
     "@reduxjs/toolkit": ^1.6.1
     "@typeform/embed-react": ^2.24.0
@@ -526,14 +526,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@olco/scripts@file:../../../utils::locator=%40olco%2Fconf-web%40workspace%3Apackages%2Fconf-web%2Fsrc":
-  version: 0.1.0
-  resolution: "@olco/scripts@file:../../../utils#../../../utils::hash=dfde52&locator=%40olco%2Fconf-web%40workspace%3Apackages%2Fconf-web%2Fsrc"
-  checksum: 10caf67ea6751deda409a451a964fcee5c59f6eaa8d89f5d1a8f62ecb9de4608f8ec66b7f573121b477283c87ad6e2ba7457f8dccf3cde2ed6967acb67275743
-  languageName: node
-  linkType: hard
-
-"@olco/scripts@workspace:utils":
+"@olco/scripts@workspace:^, @olco/scripts@workspace:utils":
   version: 0.0.0-use.local
   resolution: "@olco/scripts@workspace:utils"
   languageName: unknown
