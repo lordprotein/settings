@@ -46,6 +46,4 @@ install.on('error', (error) => {
 
 install.on('close', (code) => {
   console.log(`yarn install process exited with code ${code}`);
-  process.stdout.end();  // Close the stdout stream
-  process.stderr.end();  // Close the stderr stream
 });
