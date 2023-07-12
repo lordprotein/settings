@@ -527,8 +527,8 @@ __metadata:
 
 "@olco/scripts@git@github.com:lordprotein/settings.git#workspace=@olco/scripts":
   version: 0.1.0
-  resolution: "@olco/scripts@git@github.com:lordprotein/settings.git#workspace=%40olco%2Fscripts&commit=d26036de51ba786c37ae71b5befded83100a9d9a"
-  checksum: 69413f6f5a955156cbccf08727d7a7baaf3b181e93e54474ef9718f27cfa06c1979e51f3f84b2e0f95ac157cff1d96c216e64af4c66690a562fe1cb801dbc2c9
+  resolution: "@olco/scripts@git@github.com:lordprotein/settings.git#workspace=%40olco%2Fscripts&commit=269237c48479a58b3f0ad698265ff6c9d7bc0f36"
+  checksum: a7dac8481d977ced353cd6806e3c6b8e5c26af0b76b55a88669a694f9df6f77a9a89426d4ae69e4975ceb5914742a9895c80a57a69c117fdce273e0d15ac1e31
   languageName: node
   linkType: hard
 
