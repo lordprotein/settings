@@ -1,0 +1,117 @@
+{
+  "name": "@olco/conf-web",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "main": "./index.js",
+  "files": [
+    "eslintrc.js",
+    "lintstagedrc.js",
+    "stylelintrc.js",
+    "tsconfig.base.json",
+    "prettierrc.js",
+    "devDependencies.json",
+    ".prettierignore"
+  ],
+  "scripts": {
+    "start": "razzle start",
+    "start:clear_mac": "rm -rf build && rm -rf cache && razzle start",
+    "build": "razzle --max-old-space-size=6900 build",
+    "test": "razzle test --env=jsdom",
+    "start:prod": "NODE_ENV=production node build/server.js",
+    "lint:ts": "tsc --skipLibCheck --noEmit",
+    "lint:eslint": "yarn eslint --fix src",
+    "lint:prettier": "prettier --check --write '{**/*,*}.{js,jsx,ts,tsx,html,css}'",
+    "lint:style": "yarn stylelint --fix '{**/*,*}.{css,scss,js,ts,jsx,tsx}'",
+    "analyze": "source-map-explorer 'build/public/static/js/*.js'",
+    "prepare": "husky install",
+    "locales:download": "node scripts/csvtojson.js",
+    "stand:sandbox": "node scripts/switch-stand-dev.js dev-stands/.env.dev.sandbox",
+    "stand:stage": "node scripts/switch-stand-dev.js dev-stands/.env.dev.stage",
+    "stand:prod": "node scripts/switch-stand-dev.js dev-stands/.env.dev.prod",
+    "postinstall": "node ../scripts/copyDevDependencies.js",
+    "sdsfd": " yarn add @olco/conf-web@git@github.com:lordprotein/settings.git#workspace=@olco/conf-web"
+  },
+  "dependencies": {
+    "@loadable/component": "^5.15.2",
+    "@loadable/server": "^5.15.2",
+    "@loadable/webpack-plugin": "^5.15.2",
+    "@olco/scripts": "git@github.com:lordprotein/settings.git#workspace=@olco/scripts",
+    "@react-hook/window-size": "^3.0.7",
+    "@reduxjs/toolkit": "^1.6.1",
+    "@typeform/embed-react": "^2.24.0",
+    "@types/yup": "^0.29.13",
+    "astra-core": "https://maven.infra.betdev.cloud/releases/npm/astra-core_0.315.0.tar.gz",
+    "astrabet-templates-kit": "https://maven.infra.betdev.cloud/releases/npm/astrabet-templates-kit_0.43.0.tar.gz",
+    "betweb-openapi-axios": "https://maven.infra.betdev.cloud/releases/npm/betweb-openapi-axios_0.216.0.tar.gz",
+    "cookie-parser": "^1.4.6",
+    "core-js": "^2.4.0",
+    "country-flags-svg": "^1.1.8",
+    "dayjs": "^1.11.7",
+    "express": "^4.17.1",
+    "express-useragent": "^1.0.15",
+    "formik": "^2.2.9",
+    "http-proxy-middleware": "^2.0.0",
+    "i18next": "^20.3.2",
+    "i18next-browser-languagedetector": "^6.1.3",
+    "i18next-fs-backend": "^1.1.1",
+    "i18next-http-backend": "^1.2.6",
+    "i18next-http-middleware": "^3.1.3",
+    "iframe-resizer": "^4.3.2",
+    "js-cookie": "^3.0.1",
+    "lodash": "^4.17.21",
+    "masonic": "^3.7.0",
+    "node-cache": "^5.1.2",
+    "node-polyfill-webpack-plugin": "^1.1.4",
+    "polished": "^4.1.3",
+    "qs": "^6.10.1",
+    "react": "^18.2.0",
+    "react-datepicker": "^4.2.0",
+    "react-dom": "^17.0.1",
+    "react-google-recaptcha-v3": "^1.10.1",
+    "react-i18next": "^11.11.0",
+    "react-infinite-scroll-hook": "^4.0.2",
+    "react-lottie": "^1.2.3",
+    "react-redux": "^7.2.4",
+    "react-responsive": "^9.0.0-beta.4",
+    "react-router-dom": "^5.0.1",
+    "react-select": "^4.3.1",
+    "react-singleton-hook": "3",
+    "react-table": "^7.7.0",
+    "react-toastify": "^9.0.5",
+    "react-transition-group": "^4.4.5",
+    "react-use-cookie": "^1.4.0",
+    "redux-injectors": "^1.3.0",
+    "redux-saga": "^1.1.3",
+    "reselect": ">=4.1.8",
+    "serialize-javascript": "^5.0.1",
+    "styled-components": "^5.3.3",
+    "yup": "^0.32.11"
+  },
+  "jest": {
+    "transform": {
+      "\\.(ts|tsx)$": "ts-jest",
+      "\\.css$": "<rootDir>/node_modules/razzle/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/node_modules/razzle/config/jest/fileTransform.js"
+    },
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.(ts|js)?(x)",
+      "<rootDir>/src/**/?(*.)(spec|test).(ts|js)?(x)"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {}
+}

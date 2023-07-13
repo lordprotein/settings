@@ -1,6 +1,6 @@
 module.exports = {
   eslintrc: require('./eslintrc'),
-  lintStaged: require('./lint-staged.config'),
+  lintStaged: require('./lintstagedrc'),
   prettierrc: require('./prettierrc'),
   stylelintrc: require('./stylelintrc'),
 }
