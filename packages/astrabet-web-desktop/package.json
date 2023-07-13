@@ -11,7 +11,8 @@
     "prettierrc.js",
     "stylelintrc.js",
     "tsconfig.base.json",
-    "bin"
+    "bin",
+    "razzle.config.js"
   ],
   "dependencies": {
     "@olco/conf-web": "workspace:^"

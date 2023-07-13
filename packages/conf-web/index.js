@@ -3,4 +3,5 @@ module.exports = {
   lintStaged: require('./lintstagedrc'),
   prettierrc: require('./prettierrc'),
   stylelintrc: require('./stylelintrc'),
+  razzleConfig: require('./razzle.config')
 }
