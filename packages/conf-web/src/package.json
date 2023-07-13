@@ -10,8 +10,7 @@
     "stylelintrc.js",
     "tsconfig.base.json",
     "prettierrc.js",
-    "devDependencies.json",
-    ".prettierignore"
+    "devDependencies.json"
   ],
   "scripts": {
     "start": "razzle start",
@@ -29,7 +28,7 @@
     "stand:sandbox": "node scripts/switch-stand-dev.js dev-stands/.env.dev.sandbox",
     "stand:stage": "node scripts/switch-stand-dev.js dev-stands/.env.dev.stage",
     "stand:prod": "node scripts/switch-stand-dev.js dev-stands/.env.dev.prod",
-    "postinstall": "node ../scripts/copyDevDependencies.js",
+    "postinstall": "node ../scripts/copy-dev-dependencies.js",
     "sdsfd": " yarn add @olco/conf-web@git@github.com:lordprotein/settings.git#workspace=@olco/conf-web"
   },
   "dependencies": {

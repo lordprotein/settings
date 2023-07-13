@@ -6,6 +6,9 @@
     "packages/conf-web/src",
     "utils"
   ],
+  "scripts": {
+    "build": "node utils/build-pkg.js"
+  },
   "main": "index.js",
   "repository": "git@github.com:lordprotein/settings.git",
   "author": "lordprotein <gamee.logi@gmail.com>",

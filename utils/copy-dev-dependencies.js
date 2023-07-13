@@ -30,7 +30,14 @@ install.stdout.on('data', (data) => {
   // Check if the message contains "core-js" information
   if (message.includes('YN0007: │ core-js')) {
     install.kill('SIGHUP')
-    console.log(123)
+    fs.unlink(libraryDevDepsJsonPath, (err) => {
+      if (err) {
+        console.error(`Error deleting file: ${err}`);
+        return;
+      }
+
+      console.log('File deleted successfully.');
+    })
   }
 
   process.stdout.write(data);
@@ -45,5 +52,14 @@ install.on('error', (error) => {
 });
 
 install.on('close', (code) => {
+  fs.unlink(libraryDevDepsJsonPath, (err) => {
+    if (err) {
+      console.error(`Error deleting file: ${err}`);
+      return;
+    }
+
+    console.log('File deleted successfully.');
+  })
+
   console.log(`yarn install process exited with code ${code}`);
 });
