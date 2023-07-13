@@ -18,10 +18,10 @@
     "sdsfd": " yarn add @olco/conf-web@git@github.com:lordprotein/settings.git#workspace=@olco/conf-web"
   },
   "dependencies": {
+    "@olco/scripts": "git@github.com:lordprotein/settings.git#workspace=@olco/scripts",
     "@loadable/component": "^5.15.2",
     "@loadable/server": "^5.15.2",
     "@loadable/webpack-plugin": "^5.15.2",
-    "@olco/scripts": "workspace:^",
     "@react-hook/window-size": "^3.0.7",
     "@reduxjs/toolkit": "^1.6.1",
     "@typeform/embed-react": "^2.24.0",
