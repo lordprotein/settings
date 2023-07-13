@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "files": [
-    "*"
+    "build-pkg.js"
   ],
   "main": "./index.js",
   "packageManager": "yarn@3.6.1"
