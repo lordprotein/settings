@@ -58,6 +58,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'no-throw-literal': 'off',
+    'import/no-extraneous-dependencies': 'off',
     'no-restricted-imports': [
       'error',
       {

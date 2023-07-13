@@ -2,6 +2,8 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
+const ncp = require('ncp').ncp;
 
 const tempDir = process.argv[2] || './'; // Путь к временной директории. Если аргумент не передан, используется './'
 
@@ -73,6 +75,20 @@ fs.readFile(packageJsonPath, 'utf8', (err, data) => {
         }
       });
     });
+
+    const binDir = path.join(tempDir, 'bin');
+    const targetBinDir = path.join(buildDir, 'bin');
+
+    if (fs.existsSync(binDir)) {
+      ncp(binDir, targetBinDir, (copyErr) => {
+        if (copyErr) {
+          console.error(`Error copying directory 'bin': ${copyErr.message}`);
+        } else {
+          console.log(`Copied directory 'bin' to '${targetBinDir}'`);
+        }
+      });
+    }
+
   } catch (parseErr) {
     console.error(`Error parsing package.json: ${parseErr.message}`);
   }

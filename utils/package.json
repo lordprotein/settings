@@ -4,8 +4,12 @@
   "version": "0.1.0",
   "license": "MIT",
   "files": [
-    "build-pkg.js", "copy-dev-dependencies.js"
+    "build-pkg.js",
+    "copy-dev-dependencies.js"
   ],
   "main": "./index.js",
-  "packageManager": "yarn@3.6.1"
+  "packageManager": "yarn@3.6.1",
+  "dependencies": {
+    "ncp": "^2.0.0"
+  }
 }

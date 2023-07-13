@@ -1,34 +1,20 @@
 {
   "name": "@olco/conf-web",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "private": true,
-  "main": "./index.js",
   "files": [
+    "devDependencies.json",
     "eslintrc.js",
+    "index.js",
     "lintstagedrc.js",
+    "prettierrc.js",
     "stylelintrc.js",
     "tsconfig.base.json",
-    "prettierrc.js",
-    "devDependencies.json"
+    "bin"
   ],
   "scripts": {
-    "start": "razzle start",
-    "start:clear_mac": "rm -rf build && rm -rf cache && razzle start",
-    "build": "razzle --max-old-space-size=6900 build",
-    "test": "razzle test --env=jsdom",
-    "start:prod": "NODE_ENV=production node build/server.js",
-    "lint:ts": "tsc --skipLibCheck --noEmit",
-    "lint:eslint": "yarn eslint --fix src",
-    "lint:prettier": "prettier --check --write '{**/*,*}.{js,jsx,ts,tsx,html,css}'",
-    "lint:style": "yarn stylelint --fix '{**/*,*}.{css,scss,js,ts,jsx,tsx}'",
-    "analyze": "source-map-explorer 'build/public/static/js/*.js'",
-    "prepare": "husky install",
-    "locales:download": "node scripts/csvtojson.js",
-    "stand:sandbox": "node scripts/switch-stand-dev.js dev-stands/.env.dev.sandbox",
-    "stand:stage": "node scripts/switch-stand-dev.js dev-stands/.env.dev.stage",
-    "stand:prod": "node scripts/switch-stand-dev.js dev-stands/.env.dev.prod",
-    "postinstall": "node ../scripts/copy-dev-dependencies.js",
+    "postinstall": "node bin/postinstall.js",
     "sdsfd": " yarn add @olco/conf-web@git@github.com:lordprotein/settings.git#workspace=@olco/conf-web"
   },
   "dependencies": {
@@ -86,30 +72,5 @@
     "serialize-javascript": "^5.0.1",
     "styled-components": "^5.3.3",
     "yup": "^0.32.11"
-  },
-  "jest": {
-    "transform": {
-      "\\.(ts|tsx)$": "ts-jest",
-      "\\.css$": "<rootDir>/node_modules/razzle/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/node_modules/razzle/config/jest/fileTransform.js"
-    },
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.(ts|js)?(x)",
-      "<rootDir>/src/**/?(*.)(spec|test).(ts|js)?(x)"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }

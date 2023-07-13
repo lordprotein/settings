@@ -1,0 +1,3 @@
+{
+  "extends": "@olco/conf-web/tsconfig.base.json"
+}

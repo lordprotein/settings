@@ -1,0 +1,19 @@
+{
+  "name": "@olco/astrabet-web-desktop",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "files": [
+    "devDependencies.json",
+    "eslintrc.js",
+    "index.js",
+    "lintstagedrc.js",
+    "prettierrc.js",
+    "stylelintrc.js",
+    "tsconfig.base.json",
+    "bin"
+  ],
+  "dependencies": {
+    "@olco/conf-web": "workspace:^"
+  }
+}

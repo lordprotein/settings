@@ -15,14 +15,14 @@ __metadata:
   linkType: hard
 
 "@babel/generator@npm:^7.22.7":
-  version: 7.22.7
-  resolution: "@babel/generator@npm:7.22.7"
+  version: 7.22.9
+  resolution: "@babel/generator@npm:7.22.9"
   dependencies:
     "@babel/types": ^7.22.5
     "@jridgewell/gen-mapping": ^0.3.2
     "@jridgewell/trace-mapping": ^0.3.17
     jsesc: ^2.5.1
-  checksum: cee15558888bdf5564e19cfaf95101b2910fa425f30cc1a25ac9b8621bd62b63544eb1b36ad89c80b5e41915699219f78712cab128d1f7e3da6a21fbf4143927
+  checksum: 7c9d2c58b8d5ac5e047421a6ab03ec2ff5d9a5ff2c2212130a0055e063ac349e0b19d435537d6886c999771aef394832e4f54cd9fc810100a7f23d982f6af06b
   languageName: node
   linkType: hard
 
@@ -465,9 +465,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@olco/conf-web@workspace:packages/conf-web/src":
+"@olco/astrabet-web-desktop@workspace:packages/astrabet-web-desktop":
   version: 0.0.0-use.local
-  resolution: "@olco/conf-web@workspace:packages/conf-web/src"
+  resolution: "@olco/astrabet-web-desktop@workspace:packages/astrabet-web-desktop"
+  dependencies:
+    "@olco/conf-web": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@olco/conf-web@workspace:^, @olco/conf-web@workspace:packages/conf-web":
+  version: 0.0.0-use.local
+  resolution: "@olco/conf-web@workspace:packages/conf-web"
   dependencies:
     "@loadable/component": ^5.15.2
     "@loadable/server": ^5.15.2
@@ -529,6 +537,8 @@ __metadata:
 "@olco/scripts@workspace:^, @olco/scripts@workspace:utils":
   version: 0.0.0-use.local
   resolution: "@olco/scripts@workspace:utils"
+  dependencies:
+    ncp: ^2.0.0
   languageName: unknown
   linkType: soft
 
@@ -749,9 +759,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 20.4.1
-  resolution: "@types/node@npm:20.4.1"
-  checksum: 22cbcc792f2eb636fe4188778ed0f32658ab872aa7fcb9847b3fa289a42b14b9f5e30c6faec50ef3c7adbc6c2a246926e5858136bb8b10c035a3fcaa6afbeed2
+  version: 20.4.2
+  resolution: "@types/node@npm:20.4.2"
+  checksum: 99e544ea7560d51f01f95627fc40394c24a13da8f041121a0da13e4ef0a2aa332932eaf9a5e8d0e30d1c07106e96a183be392cbba62e8cf0bf6a085d5c0f4149
   languageName: node
   linkType: hard
 
@@ -3008,6 +3018,15 @@ __metadata:
   version: 0.2.1
   resolution: "nanoclone@npm:0.2.1"
   checksum: 96b2954e22f70561f41e20d69856266c65583c2a441dae108f1dc71b716785d2c8038dac5f1d5e92b117aed3825f526b53139e2e5d6e6db8a77cfa35b3b8bf40
+  languageName: node
+  linkType: hard
+
+"ncp@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "ncp@npm:2.0.0"
+  bin:
+    ncp: ./bin/ncp
+  checksum: ea9b19221da1d1c5529bdb9f8e85c9d191d156bcaae408cce5e415b7fbfd8744c288e792bd7faf1fe3b70fd44c74e22f0d43c39b209bc7ac1fb8016f70793a16
   languageName: node
   linkType: hard
 
